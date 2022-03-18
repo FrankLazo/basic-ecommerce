@@ -1,0 +1,25 @@
+$mobile-min:  359px
+$mobile-max:  479px
+$tablet:      767px
+$laptop:      1023px
+$desktop:     1024px
+
+@mixin mobile-min
+  @media screen and ( max-width: $mobile-min )
+    @content
+
+@mixin mobile-max
+  @media screen and ( max-width: $mobile-max )
+    @content
+
+@mixin tablet
+  @media screen and ( max-width: $tablet )
+    @content
+
+@mixin laptop
+  @media screen and ( max-width: $laptop )
+    @content
+
+@mixin desktop
+  @media screen and ( min-width: $desktop )
+    @content

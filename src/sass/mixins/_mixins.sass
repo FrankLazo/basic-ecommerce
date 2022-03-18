@@ -1,0 +1,128 @@
+/*
+ * MIXIN BORDER
+ *
+ * t:		top
+ * l:		left
+ * b:		bottom
+ * r:		right
+ * all: all borders
+ *
+ */
+
+@mixin border( $border, $width, $style, $color )
+  @if $border == a or $border == all
+    border: $width $style $color
+
+  @else if $border == t or $border == top
+    border-top: $width $style $color
+  @else if $border == l or $border == left
+    border-left: $width $style $color
+  @else if $border == b or $border == bottom
+    border-bottom: $width $style $color
+  @else if $border == r or $border == right
+    border-right: $width $style $color
+
+  @else if $border == tb or $border == bt
+    border-width: $width 0
+    border-style: $style none
+    border-color: $color none
+  @else if $border == lr or $border == rl
+    border-width: 0 $width
+    border-style: none $style
+    border-color: none $color
+  @else if $border == tl or $border == lt
+    border-width: $width 0 0 $width
+    border-style: $style none none $style
+    border-color: $color none none $color
+  @else if $border == tr or $border == rt
+    border-width: $width $width 0 0
+    border-style: $style $style none none
+    border-color: $color $color none none
+  @else if $border == bl or $border == lb
+    border-width: 0 0 $width $width
+    border-style: none none $style $style
+    border-color: none none $color $color
+  @else if $border == br or $border == rb
+    border-width: 0 $width $width 0
+    border-style: none $style $style none
+    border-color: none $color $color none
+
+  @else if $border == tlr or $border == trl or $border == rtl or $border == ltr or $border == rlt or $border == lrt
+    border-width: $width $width 0
+    border-style: $style $style none
+    border-color: $color $color none
+  @else if $border == blr or $border == brl or $border == rbl or $border == lbr or $border == rlb or $border == lrb
+    border-width: 0 $width $width
+    border-style: none $style $style
+    border-color: none $color $color
+  @else if $border == tbr or $border == trb or $border == btr or $border == rtb or $border == brt or $border == rbt
+    border-width: $width $width $width 0
+    border-style: $style $style $style none
+    border-color: $color $color $color none
+  @else if $border == tbl or $border == tlb or $border == btl or $border == ltb or $border == blt or $border == lbt
+    border-width: $width 0 $width $width
+    border-style: $style none $style $style
+    border-color: $color none $color $color
+  @else
+    @error 'Unknown side #{ $border }'
+
+/*
+ * MIXIN FLEX
+ *
+ */
+
+@mixin flex( $justify: null, $align: null, $direction: null )
+  display: flex
+
+  @if $direction != null
+    flex-direction: $direction
+
+  @if $justify != default and $justify != null
+    justify-content: $justify
+
+  @if $align != default and $align != null
+    align-items: $align
+
+/*
+ * MIXIN MARGIN
+ *
+ */
+
+@mixin margin( $top, $right: null, $bottom:null, $left:null )
+  @if $right == null and $bottom == null and $left == null
+    margin: $top
+  @else if $bottom == null and $left == null
+    margin: $top $right
+  @else if $left == null
+    margin: $top $right $bottom
+  @else
+    @if $top != 0
+      margin-top:	$top
+    @if $right != 0
+      margin-right: $right
+    @if $bottom != 0
+      margin-bottom: $bottom
+    @if $left != 0
+      margin-left: $left
+
+/*
+ * MIXIN PADDING
+ *
+ */
+
+@mixin padding( $top, $right: null, $bottom:null, $left:null )
+  @if $right == null and $bottom == null and $left == null
+    padding: $top
+  @else if $bottom == null and $left == null
+    padding: $top $right
+  @else if $left == null
+    padding: $top $right $bottom
+  @else
+    @if $top != 0
+      padding-top:	$top
+    @if $right != 0
+      padding-right: $right
+    @if $bottom != 0
+      padding-bottom: $bottom
+    @if $left != 0
+      padding-left: $left

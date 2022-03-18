@@ -1,0 +1,59 @@
+.articulos
+	.articulos-container
+		.articulos-galeria
+			each articulo, index in articulos
+				if index != 0
+					.articulo-imagen.articulo-invisible
+						img( src= articulo, data-src= articulo, data-srcfull= fotografias[ index ] ).img-data-src
+				else
+					.articulo-imagen.articulo-invisible
+						img( src= articulo, data-src= articulo, data-srcfull= fotografias[ index ] ).img-data-src.actual-imagen
+
+		.articulo-principal
+			.articulo-imagen
+				img( src= articulos[ 0 ] )#main-image
+
+			.articulo-btn
+				.open-icon
+
+			each articulo, index in articulos
+				.articulo-mobile( data-src= fotografias[ index ] )
+					img( src= articulo ).main-image
+
+	.mobile-dots-container
+		each articulo in articulos
+			.dot-mobile
+
+	.articulo-descripcion
+		h1 Detalles del Producto
+		p.name= articulosDatos.nombre
+		p.description= articulosDatos.descripcion
+
+		.size-list
+			p Tallas disponibles:
+			ul
+				each talla in articulosDatos.tallas
+					li.sizes= talla
+
+		.color-list
+			p Colores disponibles:
+			ul
+				each color in articulosDatos.colores
+					li
+						span.color( style= "background-color: " + color.codigo + ";" )
+						span.names= color.nombre
+
+		p= articulosDatos.material
+
+		.detail-list
+			p Detalles:
+			ul
+				each detail in articulosDatos.detalles
+					li= detail
+
+		p.precio= `S/. ${ Number.parseFloat( articulosDatos.precio ).toFixed( 2 ) }`
+
+		if !stock
+			p.stock
+				span
+				| Sin stock

@@ -1,0 +1,30 @@
+header.header
+	.logo
+		a( href= routes.root )
+			img( src= brand.logo, alt= brand.description )
+
+	nav.navbar
+		ul.main-navbar
+			li.navbar-item.actual
+				a( href= routes.root )= menu.main[ 0 ]
+			li.navbar-item
+				a( href= routes.productos )= menu.main[ 1 ]
+			li.navbar-item
+				a( href= routes.productos )= menu.main[ 2 ]
+
+		ul.second-navbar
+			li.navbar-item
+				button.navbar-btn#btn-sales
+					.navbar-icon
+					.navbar-text= menu.second[ 0 ]
+			li.navbar-item
+				button.navbar-btn#btn-contact
+					.navbar-icon
+					.navbar-text= menu.second[ 1 ]
+			li.navbar-item
+				button.navbar-btn#btn-about
+					.navbar-icon
+					.navbar-text= menu.second[ 2 ]
+
+	.toggle-menu
+		.burger

@@ -1,0 +1,6 @@
+mixin card-producto( path, src, title, price )
+	.card-producto
+		a( href= path )
+			img( src= src, alt= title )
+			span.card-title= title
+			span.card-price= `S/. ${ Number.parseFloat( price ).toFixed( 2 ) }`

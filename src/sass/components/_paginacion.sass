@@ -1,0 +1,61 @@
+.paginacion
+	text-align: center
+
+	a
+		display: inline-block
+		margin-right: .25em
+		width: 41px
+		height: 41px
+
+	a:last-child
+		margin-right: 0
+
+	.pagina-btn
+		width: 41px
+		height: 41px
+		background-color: var( --light-gray-background )
+		border: none
+		font-size: var( --text-size-ms )
+		font-weight: $bold-font
+
+	.pagina-btn:hover,
+	.actual
+		background-color: var( --dark-background )
+		color: var( --light-text )
+
+	.pagina-btn:hover
+		cursor: pointer
+
+@include mobile-max
+	.paginacion
+		a
+			width: 35px
+			height: 35px
+			margin-right: .125em
+
+		.pagina-btn
+			width: 35px
+			height: 35px
+			font-size: var( --text-size-sm )
+
+/* RESULTADOS */
+
+.resultados
+	margin-top: 1em
+	margin-bottom: 4em
+
+	p
+		color: var( --dark-text )
+		text-align: center
+
+@include tablet
+	.resultados
+		margin-bottom: 2em
+
+@include mobile-max
+	.resultados
+		margin-top: 1em
+		margin-bottom: 1em
+
+		p
+			font-size: var( --text-size-sm )

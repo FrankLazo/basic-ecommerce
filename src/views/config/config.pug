@@ -1,0 +1,272 @@
+-
+	let siteName = {
+		home: 		 'Manu\'s Elegance - Ropa exclusiva para damas',
+		productos: 'Manu\'s Elegance - Ropa exclusiva para damas',
+		articulos: 'Manu\'s Elegance - Ropa exclusiva para damas',
+		login: 		 'Manu\'s Elegance - Login',
+		dashboard: 'Manu\'s Elegance - Panel de administración',
+	};
+
+	let resources = {
+		favicon: 		 'assets/favicon.ico',
+		style: 		 	 'css/style.css',
+		styleApp:  	 'css/style-app.css',
+		fontawesome: 'https://kit.fontawesome.com/ac20f32be7.js',
+		script: 		 'js/main-min.js',
+		cssBS:			 'vendor/bootstrap/css/bootstrap.min.css',
+		jsBS:			 	 'vendor/bootstrap/js/bootstrap.min.js',
+		jquery:		 	 'vendor/jquery/jquery-3.5.1.min.js',
+	};
+
+	let routes = {
+		root: 		 './',
+		productos: './productos.html',
+		articulos: './articulos.html',
+	};
+
+	let brand = {
+		logo:			 	 'assets/logo.svg',
+		description: 'Logo Manu\'s Elegance',
+	};
+
+	let menu = {
+		main: [
+			'novedades', 'productos', 'catalogo de temporada',
+		],
+		second: [
+			'Puntos de Venta', 'Contacto', 'Acerca de',
+		],
+	};
+
+	let categories = [
+		'novedades', 'abrigos', 'blazers',
+		'casacas', 'chalecos', 'chalinas',
+		'poleras', 'sacos', 'vestidos',
+	];
+
+	let social = {
+		facebook: 'https://www.facebook.com/ManusElegance/',
+		instagram: 'https://www.instagram.com/manuselegance/',
+	};
+
+	let modal = {
+		sales: {
+			id: 'modal-sales',
+			title: menu.second[0],
+		},
+		contact: {
+			id: 'modal-contact',
+			title: menu.second[1],
+		},
+		about: {
+			id: 'modal-about',
+			title: menu.second[2],
+		},
+	};
+
+	let location = [
+		{
+			url: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3901.5414157064574!2d-77.04960696823764!3d-12.075041629162172!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105c9b8a41af259%3A0x9c37b9f3cf906034!2sManu\'s%20Elegance%20Galeria%20Center!5e0!3m2!1ses-419!2spe!4v1573677265387!5m2!1ses-419!2spe',
+			title: 'Tienda Principal',
+			address: 'Jirón Mariscal Luzuriaga 355 Interior 103-110-111-128-136, Jesús María 15072',
+			reference: 'Galería Center',
+		},
+		{
+			url: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3901.3791342729032!2d-77.03578568578712!3d-12.086176745924096!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105c85ffd01e179%3A0x672131fafbb3fa00!2sJuegos%20Ponte%20Mosca!5e0!3m2!1ses-419!2spe!4v1570382595321!5m2!1ses-419!2spe',
+			title: 'Tienda Sucursal',
+			address: 'Avenida Tupac Amaru 210 Apartado 1301, Rimac 15333',
+			reference: 'Galería La Ideal',
+		},
+	];
+
+	let slideImages = [
+		{
+			path: 'assets/images/banner/slide-1.jpg',
+			title: '',
+			bannerSide: 'banner-left',
+		},
+		{
+			path: 'assets/images/banner/slide-2.jpg',
+			title: '',
+			bannerSide: 'banner-right',
+		},
+		{
+			path: 'assets/images/banner/slide-3.jpg',
+			title: '',
+			bannerSide: 'banner-left',
+		},
+		{
+			path: 'assets/images/banner/slide-4.jpg',
+			title: '',
+			bannerSide: 'banner-right',
+		},
+	];
+
+	let novedadesTitle = 'prenda de determinadas características y en específicos colores';
+	let precio = 125.50;
+
+	let novedades = [
+		{
+			path: 'assets/images/novedades/nuevo-1.jpg',
+			title: novedadesTitle,
+			precio: precio,
+		},
+		{
+			path: 'assets/images/novedades/nuevo-2.jpg',
+			title: novedadesTitle,
+			precio: precio,
+		},
+		{
+			path: 'assets/images/novedades/nuevo-3.jpg',
+			title: novedadesTitle,
+			precio: precio,
+		},
+		{
+			path: 'assets/images/novedades/nuevo-4.jpg',
+			title: novedadesTitle,
+			precio: precio,
+		},
+		{
+			path: 'assets/images/novedades/nuevo-5.jpg',
+			title: novedadesTitle,
+			precio: precio,
+		},
+		{
+			path: 'assets/images/novedades/nuevo-6.jpg',
+			title: novedadesTitle,
+			precio: precio,
+		},
+		{
+			path: 'assets/images/novedades/nuevo-7.jpg',
+			title: novedadesTitle,
+			precio: precio,
+		},
+		{
+			path: 'assets/images/novedades/nuevo-8.jpg',
+			title: novedadesTitle,
+			precio: precio,
+		},
+	];
+
+	let categoriasHome = [
+		{
+			path: 'assets/images/categorias/categoria-1.jpg',
+			title: 'blazers',
+		},
+		{
+			path: 'assets/images/categorias/categoria-2.jpg',
+			title: 'sacos',
+		},
+		{
+			path: 'assets/images/categorias/categoria-3.jpg',
+			title: 'chalinas',
+		},
+		{
+			path: 'assets/images/categorias/categoria-4.jpg',
+			title: 'casacas',
+		},
+	];
+
+	let productos = [
+		{
+			path: 'assets/images/productos/producto-1.jpg',
+			title: novedadesTitle,
+			precio: precio,
+		},
+		{
+			path: 'assets/images/productos/producto-2.jpg',
+			title: novedadesTitle,
+			precio: precio,
+		},
+		{
+			path: 'assets/images/productos/producto-3.jpg',
+			title: novedadesTitle,
+			precio: precio,
+		},
+		{
+			path: 'assets/images/productos/producto-4.jpg',
+			title: novedadesTitle,
+			precio: precio,
+		},
+		{
+			path: 'assets/images/productos/producto-5.jpg',
+			title: novedadesTitle,
+			precio: precio,
+		},
+		{
+			path: 'assets/images/productos/producto-6.jpg',
+			title: novedadesTitle,
+			precio: precio,
+		},
+		{
+			path: 'assets/images/productos/producto-7.jpg',
+			title: novedadesTitle,
+			precio: precio,
+		},
+		{
+			path: 'assets/images/productos/producto-8.jpg',
+			title: novedadesTitle,
+			precio: precio,
+		},
+		{
+			path: 'assets/images/productos/producto-9.jpg',
+			title: novedadesTitle,
+			precio: precio,
+		},
+		{
+			path: 'assets/images/productos/producto-10.jpg',
+			title: novedadesTitle,
+			precio: precio,
+		},
+		{
+			path: 'assets/images/productos/producto-11.jpg',
+			title: novedadesTitle,
+			precio: precio,
+		},
+		{
+			path: 'assets/images/productos/producto-12.jpg',
+			title: novedadesTitle,
+			precio: precio,
+		},
+	];
+
+	let articulosDatos = {
+		nombre: novedadesTitle,
+		descripcion: 'Descripción general del producto mostrado.',
+		colores: [
+			{ nombre: 'negro', 		codigo: '#000000' },
+			{ nombre: 'azul', 		codigo: '#0000ff' },
+			{ nombre: 'rojo', 		codigo: '#ff0000' },
+			{ nombre: 'amarillo', codigo: '#ffff00' },
+			{ nombre: 'azul', 		codigo: '#0000ff' },
+			{ nombre: 'rojo', 		codigo: '#ff0000' },
+			{ nombre: 'amarillo', codigo: '#ffff00' },
+			{ nombre: 'azul', 		codigo: '#0000ff' },
+			{ nombre: 'rojo', 		codigo: '#ff0000' },
+			{ nombre: 'amarillo', codigo: '#ffff00' },
+			{ nombre: 'blanco', 	codigo: '#ffffff' },
+		],
+		tallas: ['xs', 's', 'm', 'l', 'xl'],
+		material: 'Materiales que componen el producto.',
+		detalles: [
+			'Descripción de diferentes detalles del producto mostrado.',
+			'Descripción de diferentes detalles del producto mostrado.',
+			'Descripción de diferentes detalles del producto mostrado.'
+			],
+		precio: precio,
+		estado: false,
+	};
+
+	let articulos = [
+		'assets/images/articulos/articulo-1.jpg',
+		'assets/images/articulos/articulo-2.jpg',
+		'assets/images/articulos/articulo-3.jpg',
+		'assets/images/articulos/articulo-4.jpg',
+	];
+
+	let fotografias = [
+		'assets/images/fotografias/fotografia-1.jpg',
+		'assets/images/fotografias/fotografia-2.jpg',
+		'assets/images/fotografias/fotografia-3.jpg',
+		'assets/images/fotografias/fotografia-4.jpg',
+	];

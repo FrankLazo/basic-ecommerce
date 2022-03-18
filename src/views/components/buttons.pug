@@ -1,0 +1,11 @@
+mixin location-btn( url, title, address, reference, active = false )
+	-
+		if ( active )
+			active = 'actual-location'
+		else
+			active = ''
+
+	button.location-btn( class= active, data-url= url )
+		h3= title
+		p= address
+		p= reference

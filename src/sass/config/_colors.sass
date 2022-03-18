@@ -1,0 +1,78 @@
+/*
+ * ho: high opacity
+ * mo: medium opacity
+ * lo: low opacity
+ *
+ */
+
+$ho: 0.8
+$mo: 0.5
+$lo: 0.2
+
+$white:  #fff
+$white-ho: rgba( $white, $ho )
+$white-mo: rgba( $white, $mo )
+$white-lo: rgba( $white, $lo )
+
+$black: #000
+$black-ho: rgba( $black, $ho )
+$black-mo: rgba( $black, $mo )
+$black-lo: rgba( $black, $lo )
+
+$gray-lt: #e4e4e4
+$gray-li: #c7c7c7
+$gray-md: #a9a9a9
+$gray-dk: #6f6f6f
+$gray-dt: #343434
+
+$gray-dt-no: #34343400
+$gray-dt-ho: rgba( $gray-dt, $ho )
+$gray-dt-mo: rgba( $gray-dt, $mo )
+
+$red:      firebrick
+$red-none: rgba( firebrick, 0 )
+$red-mo:   rgba( firebrick, $mo )
+
+$slide-shadow: 0 11px 22px rgba( 0, 0, 0, 0.20 ), 0 7px 7px rgba( 0, 0, 0, 0.24 )
+$card-shadow:  0 15px 15px -15px rgba( $black, $mo ), 0 1px rgba( $black, $lo )
+$base-shadow:  0 0 0 0 rgba( $black, 0 )
+$color-shadow: 1px 1px 4px $gray-dk
+
+\:root
+  --high-opacity:   #{ $ho }
+  --medium-opacity: #{ $mo }
+  --low-opacity:    #{ $lo }
+
+  --light-background: 	   #{ $white }
+  --light-background-ho:   #{ $white-ho }
+  --light-background-mo:   #{ $white-mo }
+  --light-background-lo:   #{ $white-lo }
+  --light-gray-background: #{ $gray-lt }
+  --dark-background:       #{ $gray-dt }
+  --dark-background-ho:    #{ $gray-dt-ho }
+  --dark-background-mo:    #{ $gray-dt-mo }
+  --dark-soft-background:  #{ $gray-dk }
+  --gray-background:       #{ $gray-md }
+
+  --light-border:       #{ $gray-lt }
+  --light-gray-border:  #{ $gray-li }
+  --dark-border:        #{ $gray-dt }
+  --dark-border-none:   #{ $gray-dt-no }
+  --active-border:      #{ $red }
+  --active-border-none: #{ $red-none }
+  --focus-border:       #{ $red-mo }
+  --black-border:       #{ $black }
+  --black-border-mo:    #{ $black-mo }
+
+  --default-text:     #{ $black }
+  --default-text-mo:  #{ $black-mo }
+  --dark-text:        #{ $gray-dk }
+  --light-text:       #{ $white }
+  --light-gray-text:  #{ $gray-lt }
+  --gray-text:        #{ $gray-md }
+  --active-text:      #{ $red }
+  --active-text-none: #{ $red-none }
+
+  --slide-shadow: #{ $slide-shadow }
+  --card-shadow:  #{ $card-shadow }
+  --base-shadow:  #{ $base-shadow }

@@ -1,0 +1,6 @@
+section
+	header.sections-header
+		h2 categorias
+	.categorias
+		each categoria in categoriasHome
+			+card-categoria(routes.productos, categoria.path, categoria.title)

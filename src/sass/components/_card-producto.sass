@@ -1,0 +1,41 @@
+.card-producto
+	box-shadow: var( --base-shadow )
+	transition: box-shadow 200ms ease-in
+	transition: transform 200ms ease-in
+
+	a
+		@include flex( center, default, column )
+		text-decoration: none
+
+	img
+		width: 100%
+
+	.card-title,
+	.card-price
+		margin-top: .5em
+		margin-bottom: .5em
+		color: var( --dark-text )
+		font-size: var( --text-size-ms )
+		text-align: center
+		text-transform: uppercase
+
+
+.card-producto:hover
+	box-shadow: var( --card-shadow )
+	transform: scale( 1.05 )
+
+	.card-title,
+	.card-price
+		color: var( --default-text )
+
+	.card-price
+		font-weight: $bold-font
+
+.card-producto:active
+	transform: scale( .95 )
+
+@include mobile-max
+	.card-producto
+		.card-title,
+		.card-price
+			font-size: var( --text-size-sm )

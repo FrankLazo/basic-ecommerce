@@ -1,0 +1,166 @@
+.navbar
+	flex-grow: 1
+	@include flex( space-between, default )
+
+	.main-navbar,
+	.second-navbar
+		@include flex
+
+	.main-navbar
+		.navbar-item
+			@include margin( 0, 0, 0, 1rem )
+
+	.second-navbar
+		@include margin( 0, 1rem, 0, 0 )
+
+		.navbar-item
+			@include margin( 0, 1rem, 0, 0 )
+
+	.navbar-item
+		box-sizing: border-box
+		height: 1.5rem
+		@include border( b, 1px, solid, var( --dark-border-none ) )
+
+		list-style-type: none
+		transition: border-bottom 0.2s ease-in
+
+		a
+			color: var( --default-text )
+			font-size: var( --text-size-ms )
+			text-decoration: none
+			text-transform: uppercase
+
+		a:visited
+			color: unset
+
+	.navbar-item:hover
+		@include border( b, 1px, solid, var( --dark-border ) )
+
+	.navbar-item.actual
+		@include border( b, 1px, solid, var( --active-border-none ) )
+
+		a
+			color: var( --active-text )
+
+		a:visited
+			color: var( --active-text )
+
+	.navbar-item.actual:hover
+		@include border( b, 1px, solid, var( --active-border ) )
+
+	.navbar-btn
+		@include flex( default, center )
+		background: none
+		border: none
+		outline: none
+		font-size: var( --text-size-sm )
+		cursor: pointer
+
+	.navbar-btn:hover
+		.navbar-icon
+			opacity: var( --high-opacity )
+
+	.navbar-icon
+		width: var( --navbar-icon-height )
+		height: var( --navbar-icon-height )
+		background-repeat: no-repeat
+		background-size: var( --navbar-icon-height ) var( --navbar-icon-height )
+		opacity: var( --low-opacity )
+		transition: opacity 0.2s ease-in
+
+	#btn-sales
+		.navbar-icon
+			background-image: url( '../assets/punto-de-venta.svg' )
+	#btn-contact
+		.navbar-icon
+			background-image: url( '../assets/contacto.svg' )
+	#btn-about
+		.navbar-icon
+			background-image: url( '../assets/acerca-de.svg' )
+
+	.navbar-text
+		@include margin( 0, 0, 0, .5em )
+
+	@include laptop
+		.navbar-text
+			display: none
+
+@include tablet
+	.navbar
+		position: absolute
+		top: var( --header-height )
+		right: 0
+
+		@include flex( default, default, column )
+
+		background-color: var( --dark-background-ho )
+		opacity: var( --medium-opacity )
+		clip-path: circle( 0 at top right )
+		transition: opacity 500ms ease-in-out, clip-path 500ms ease-in-out
+
+		.main-navbar,
+		.second-navbar
+			@include flex( default, center, column )
+			margin: 0
+
+			.navbar-item
+				margin: 0
+
+		.navbar-item
+			height: unset
+			@include border( b, 1px, solid, var( --dark-border ) )
+
+		.navbar-item.actual
+			background-color: var( --light-background-mo )
+			@include border( b, 1px, solid, var( --dark-border ) )
+			font-weight: $bold-font
+			letter-spacing: 0.125rem
+
+		.navbar-item.actual:hover
+			@include border( b, 1px, solid, var( --dark-border ) )
+
+		.navbar-item a,
+		.navbar-btn
+			display: block
+			@include flex( center, default )
+
+			width: 480px
+			@include padding(1rem, 0)
+			color: var( --light-text )
+
+		.navbar-item.actual a
+			color: var( --active-text )
+
+		.navbar-item.actual a:visited
+			color: var( --active-text )
+
+		.navbar-item a:hover,
+		.navbar-btn:hover
+			background-color: var( --dark-background )
+
+		.navbar-item a:active,
+		.navbar-btn:active
+			background-color: var( --light-background-mo )
+
+		.navbar-item a:visited,
+		.navbar-btn:visited
+			color: var( --light-text )
+
+		.navbar-icon
+			display: none
+
+		.navbar-text
+			display: block
+			margin: 0
+			font-size: var( --text-size-ms )
+			text-transform: uppercase
+
+	.open-navbar
+		opacity: 100
+		clip-path: circle( 142% at top right )
+
+@include mobile-max
+	.navbar
+		.navbar-item a,
+		.navbar-btn
+			width: 100vw

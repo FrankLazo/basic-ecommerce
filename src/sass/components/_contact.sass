@@ -1,0 +1,75 @@
+.contact-input-label
+	@include flex( space-between, center )
+	@include margin( 0, 0, 1em, 0 )
+
+	label
+		font-size: var( --text-size-ms )
+
+	input,
+	textarea
+		box-sizing: border-box
+		width: 40em
+		@include padding( .5em )
+		@include border( a, 1px, solid, var( --light-border ) )
+		outline: none
+		font-size: var( --text-size-ms )
+
+	input:focus,
+	textarea:focus
+		outline: 2px solid var( --focus-border )
+
+.contact-input-label:nth-child( 3 )
+	label
+		align-self: flex-start
+		@include padding( .5em, 0, 0, 0 )
+
+.contact-submit
+	@include flex( flex-end, default )
+
+.btn-black
+	background-color: var( --dark-background )
+	border: none
+	color: var( --light-text )
+	@include padding(.75em, 3.5em)
+	font-size: var( --text-size-ms )
+	letter-spacing: 0.125rem
+	text-transform: uppercase
+
+.btn-black:hover
+	background-color: var( --dark-soft-background )
+	cursor: pointer
+
+.btn-black:active
+	background-color: var( --light-background )
+	color: var( --default-text )
+
+.btn-black:focus
+	outline: 2px solid var( --focus-border )
+
+@include tablet
+	.contact-input-label
+		@include flex( default, flex-start, column )
+
+		label
+			@include padding( 0, 0, .5em, .5em )
+
+		input,
+		textarea
+			width: 100%
+
+	.contact-input-label:nth-child( 3 )
+		label
+			@include padding( 0, 0, 0, 0 )
+
+@include mobile-max
+	.contact-input-label
+		label
+			display: none
+
+	.btn-black
+		width: 100%
+		padding: .75em 0
+
+@include mobile-max
+	.btn-black
+		font-size: var( --text-size-sm )

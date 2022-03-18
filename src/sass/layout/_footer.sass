@@ -1,0 +1,89 @@
+.footer
+	width: 100%
+	background-color: var( --light-gray-background )
+
+.footer-sections
+	@include flex( space-between, default )
+	width: 1024px
+	@include padding( 1rem, 0 )
+	@include margin( auto )
+	font-size: var( --text-size-ms )
+
+	a
+		color: var( --default-text )
+		text-decoration: none
+
+	a:visited
+		color: var( --default-text )
+
+	a:hover
+		@include border( b, 1px, solid, var( --dark-border ) )
+
+.footer-title
+	@include margin( 0, 0, .5em, 0 )
+	font-weight: $bold-font
+	text-transform: uppercase
+
+.footer-item
+	@include margin( 0, 0, .25em, 0 )
+	line-height: normal // Corrige el cambio de normalize.scss
+	list-style-type: none
+
+.footer-categories
+	a
+		text-transform: capitalize
+
+.footer-btn
+	background-color: unset
+	border: none
+	@include border( b, 1px, solid, var( --dark-border-none ) )
+	outline: unset
+	font-size: unset
+
+.footer-btn:hover
+	@include border( b, 1px, solid, var( --dark-border ) )
+	cursor: pointer
+
+.footer-contact
+	.footer-item
+		@include flex()
+
+.contact-label
+	display: inline-block
+	width: 7em
+	text-transform: uppercase
+
+.footer-copyright
+	background-color: var( --dark-background )
+	@include padding(.5em)
+	color: var( --light-gray-text )
+	font-size: var( --text-size-ms )
+	text-align: center
+
+@media screen and ( max-width: 1199px )
+	.footer-sections
+		width: 100%
+
+	.footer-categories
+		@include padding( 0, 0, 0, 5em )
+
+	.footer-contact
+		@include padding( 0, 5em, 0, 0 )
+
+@include tablet
+	.footer-about
+		@include padding( 0, 5em, 0, 0 )
+
+	.footer-contact
+		display: none
+
+@include mobile-max
+	.footer-sections,
+	.footer-copyright
+		font-size: var( --text-size-sm )
+
+	.footer-categories
+		@include padding(0, 0, 0, 2em)
+
+	.footer-about
+		@include padding(0, 2em, 0, 0)

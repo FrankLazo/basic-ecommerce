@@ -13,9 +13,9 @@ Below, we have a first prototype made in [Photoshop][Photoshop] and [InVision][I
 
 - [Gallery prototype - First version](https://invis.io/RDSCSNI6ZKT#/366546754_Wireframe_-_Home)
 <!-- TODO: -->
-- [Gallery prototype - Second version]()
+- [Gallery prototype - Second version](https://www.figma.com/proto/Dg6YZgWEIcNVdHx68L2LFX/Basic-eCommerce?page-id=232%3A245&node-id=601%3A294&viewport=273%2C48%2C0.11&scaling=scale-down&starting-point-node-id=601%3A294)
 - [Management system prototype]()
-- [Design file]()
+- [Design file](https://www.figma.com/file/Dg6YZgWEIcNVdHx68L2LFX/Basic-eCommerce?node-id=232%3A245)
 
 ## Installations
 
@@ -49,10 +49,11 @@ Starting [npm][npm]:
 npm init -y
 ```
 
-Local installation of [gulp]:
+Local installation of [gulp] and [Sass]:
 
 ```bash
 npm install --save-dev gulp
+npm install --save-dev sass
 ```
 
 Local installation of [Babel]:
@@ -63,38 +64,26 @@ npm install --save-dev @babel/register
 npm install --save-dev @babel/preset-env
 ```
 
-<!-- Installation of [gulp] plugins:
+Installation of [gulp] plugins:
 
 ```bash
-# npm install --save-dev gulp-babel
-# npm install --save-dev gulp-terser
-# npm install --save-dev gulp-concat
+npm install --save-dev gulp-babel
+npm install --save-dev gulp-terser
+npm install --save-dev gulp-concat
 
-# npm install --save-dev gulp-htmlmin
+npm install --save-dev gulp-pug
+npm install --save-dev gulp-sass
 
-# npm install --save-dev gulp-postcss
-# npm install --save-dev gulp-cssnano
-# npm install --save-dev gulp-autoprefixer
-
-# npm install --save-dev gulp-pug
-
-# npm install --save-dev gulp-sass
-# npm install --save-dev gulp-purgecss
-
-# npm install --save-dev gulp-cache-bust
-# npm install --save-dev gulp-imagemin
-# npm install --save-dev browser-sync
-# npm install --save-dev gulp-plumber
-
-# npm install --save-dev gulp-rename
-# npm install --save-dev @cedx/gulp-php-minify
+npm install --save-dev gulp-cache-bust
+npm install --save-dev browser-sync
+npm install --save-dev gulp-plumber
 
 # npm install --save-dev eslint
 # npm install --save-dev gulp-eslint
 
 # npx eslint --init
 # .eslintrc.json
-``` -->
+```
 
 ## File structure
 
@@ -111,29 +100,53 @@ Folders and files **organization**:
 ```
 basic-ecommerce/
 |
-|— dist/                    // Production folder
+|— build/                   // Production folder
 |— layout/                  // First approach with raw HTML, CSS and JS
 |— node_modules/            // Created by npm
 |— src/                     // Development folder
 |
+|— .babelrc                 // For ES6 syntax
 |— .editorconfig            // Coding styles
 |— .gitignore               // Ignored files by git
+|— gulpfile.babel.js        // Definition of gulp tasks
 |— package-lock.json        // Created by npm
 |— package.json             // Created by npm
 |— README.md                // Information about the project
 ```
 
 <!--
-|— .babelrc                 // Para la sintaxis de ES6
 |— .browserslistrc          // Automatizar los respaldos de JS
 |— .eslintrc.json           // Configuración de la sintaxis JS
 |— .htaccess                // Redirección a la aplicación (Sólo local)
 |— composer.json            // Creado con composer
 |— composer.lock            // Creado con composer
 |— composer.phar            // Creado con composer
-|— gulpfile.babel.js        // Tareas de gulp
-|— gulpfile.mjs             // Tareas de gulp
 -->
+
+**src** folder organization:
+
+```
+src/
+|
+|— sass/
+|  |
+|  |— base/
+|  |— components/
+|  |— config/
+|  |— layout/
+|  |— mixins/
+|
+|— scripts/
+|
+|— views/
+   |
+   |— components/           // Mixins
+   |— config/               // Variables and global constants
+   |— includes/             // Finished content for all the pages
+   |— pages/                // Finished pages for compilation
+   |— sections/             // Finished content for some pages
+   |— templates/            // General structure of pages
+```
 
 <!--
 |— database/                // Bases de datos
@@ -156,28 +169,6 @@ basic-ecommerce/
 |       |— css/
 |       |— data/
 |       |— js/
-|
-|
-|— src/                     // Directorio de desarrollo front-end
-|   |
-|   |— sass/
-|   |   |
-|   |   |— base/
-|   |   |— components/
-|   |   |— config/
-|   |   |— layout/
-|   |   |— mixins/
-|   |
-|   |— scripts/
-|   |
-|   |— views/
-|       |
-|       |— components/      // Mixins
-|       |— config/          // Variables y constantes globales
-|       |— includes/        // Contenido listo para todas las páginas
-|       |— pages/           // Páginas listas para compilación
-|       |— sections/        // Contenido listo para algunas páginas
-|       |— templates/       // Estructura general de las páginas
 |
 |— vendor/
 -->

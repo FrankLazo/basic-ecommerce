@@ -1,0 +1,15 @@
+.logo
+	@include margin( 0, 1rem, 0, 2rem )
+	@include border( r, 1px, solid, var( --light-border ) )
+	@include padding( 0, 2rem, 0, 0 )
+
+	img
+		height: 2rem
+
+@include tablet
+	.logo
+		border-right: unset
+
+@include mobile-max
+	.logo
+		@include margin( 0, 0, 0, 1rem )

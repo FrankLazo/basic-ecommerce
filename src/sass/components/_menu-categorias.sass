@@ -1,0 +1,66 @@
+.categorias-menu
+	width: 100%
+
+	.categorias-title,
+	a
+		color: var( --dark-text )
+		font-size: var( --text-size-ms )
+		text-decoration: none
+		text-transform: capitalize
+
+	.categorias-title
+		display: none
+		padding: .5em
+		text-transform: uppercase
+
+	ul
+		@include flex( space-between, default )
+		margin: 0 4em
+		padding-top: .5em
+		border-bottom: 1px solid var( --light-gray-border )
+
+	li
+		display: block
+		padding: .5em
+		list-style-type: none
+
+	a:hover
+		color: var( --text-default )
+		font-weight: $bold-font
+
+@include laptop
+	.categorias-menu
+		ul
+			margin: 0 1em
+
+@include tablet
+	.categorias-menu
+		ul
+			margin: 0
+			margin-bottom: 1em
+			padding-top: 0
+
+@include mobile-max
+	.categorias-menu
+		.categorias-title
+			display: block
+
+		ul
+			display: none
+			flex-direction: column
+			position: absolute
+			width: 100%
+			background-color: var( --light-background-ho )
+			margin: 0
+			margin-bottom: 1em
+
+		li
+			padding-left: 2em
+			border-top: 1px solid var( --light-gray-border )
+
+		li:hover,
+		li:active
+			background-color: 1px solid var( --dark-background-mo )
+
+	.categorias-menu:hover ul
+		display: block

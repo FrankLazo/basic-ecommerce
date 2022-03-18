@@ -1,0 +1,30 @@
+include ../config/config
+include ../components/buttons
+include ../components/inputs
+include ../components/card-producto
+include ../components/card-categoria
+
+doctype html
+html( lang="es" )
+	head
+		meta( charset="utf-8" )
+		meta( name="viewport", content="width=device-width, initial-scale=1.0" )
+
+		block title
+			title= siteName.home
+
+		link( rel="shortcut icon", href= resources.favicon, type="image/x-icon" )
+		link( rel="stylesheet", href= resources.style )
+
+		script( src= resources.fontawesome, crossorigin="anonymous" )
+	body
+		include ../includes/header
+		block page
+		include ../includes/footer
+		include ../includes/modal-sales
+		include ../includes/modal-contact
+		include ../includes/modal-about
+		include ../includes/social
+		include ../includes/whatsapp
+
+		script( src= resources.script )

@@ -1,0 +1,7 @@
+ul
+	li.location-item
+		+location-btn(location[0].url, location[0].title, location[0].address, location[0].reference, true)
+	li.location-item
+		+location-btn(location[1].url, location[1].title, location[1].address, location[1].reference)
+
+iframe(src= location[0].url, frameborder="0", allowfullscreen, id="location-iframe")

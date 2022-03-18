@@ -1,0 +1,37 @@
+.toggle-menu
+	display: none
+	@include margin( 0, 1.5rem, 0, 0 )
+	@include padding( 1rem, .5rem )
+	cursor: pointer
+
+.burger,
+.burger::before,
+.burger::after
+	content: ''
+	display: block
+	height: 2px
+	width: 1.5rem
+	background-color: var( --dark-background )
+	transition: all ease-in-out 500ms
+
+.burger::before
+	transform: translateY( -6px )
+
+.burger::after
+	transform: translateY( 4px )
+
+.open-burger
+	.burger
+		transform: rotate( 45deg )
+	.burger::before
+		opacity: 0
+	.burger::after
+		transform: translateY( -2px ) rotate( -90deg )
+
+@include tablet
+	.toggle-menu
+		display: block
+
+@include mobile-max
+	.toggle-menu
+		@include margin( 0, .5rem, 0, 0 )

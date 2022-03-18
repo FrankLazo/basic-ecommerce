@@ -1,0 +1,29 @@
+.datos-contacto
+	.subdatos-1
+		p
+			span.contact-icon.contact-mail
+			span.contact-data eavellaneda.uni@gmail.com
+		p
+			span.contact-icon.contact-address
+			span.contact-data Jirón Mariscal Luzuriaga 355 Interior 103-110-111-128-136, Jesús María 15072
+
+	.subdatos-2
+		p
+			span.contact-icon.contact-phone
+			span.contact-data ---
+		p
+			span.contact-icon.contact-whatsapp
+			span.contact-data 981658350
+		p
+			span.contact-icon.contact-whatsapp
+			span.contact-data 981626580
+
+.modal-header
+	span.modal-icon.escribenos
+	h2.modal-title escribenos
+
+form(action="" method="POST").contact-form
+	+contact-input('Nombres', 'Nombres', 'nombres', 'name', 'text')
+	+contact-input('Correo', 'Correo electrónico', 'correo', 'mail', 'email')
+	+contact-textarea('Mensaje', 'Escribe aquí tu mensaje...', 'mensaje', 'msge')
+	+contact-submit('Enviar (No Disponible)', 'send')

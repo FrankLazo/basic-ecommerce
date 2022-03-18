@@ -1,0 +1,21 @@
+.paginacion
+	a( href= routes.productos )
+		button.pagina-btn &lt
+
+	- let i = 1
+	a( href= routes.productos )
+		button.pagina-btn.actual= i++
+	while i <= 10
+		a( href= routes.productos )
+			button.pagina-btn= i++
+
+	a( href= routes.productos )
+		button.pagina-btn &gt
+
+.resultados
+	if true
+		p Mostrando resultados del 1 al 12
+			br
+			| de 120 encontrados.
+	else
+		p No se encontraron productos.

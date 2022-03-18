@@ -1,0 +1,14 @@
+.slideshow-container
+	each slide in slideImages
+		.mySlide
+			img(src= slide.path)
+			.banner(class= slide.bannerSide)
+				.banner-title
+				a(href= routes.productos) descubrir más
+
+	.prev-btn#prev-btn
+	.next-btn#next-btn
+
+	.dots-container
+		each slide in slideImages
+			span.dot

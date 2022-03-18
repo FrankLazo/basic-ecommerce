@@ -1,0 +1,56 @@
+.social-container
+	position: fixed
+	top: 75vh
+	left: 0
+
+	display: flex
+	flex-direction: column
+
+	z-index: var( --z-social )
+
+	a
+		display: block
+
+	a:first-child
+		margin-bottom: .5rem
+
+	.social-item
+		display: flex
+		justify-content: center
+		align-items: center
+
+		height: 3rem
+		border-radius: 5px
+		overflow: hidden
+
+	.fab
+		font-size: 3.5rem
+
+	.fa-facebook-square,
+	.fa-instagram-square
+		background-color: rgba( 256, 256, 256, .5 )
+		color: #333
+
+	a:hover
+		.fa-facebook-square
+			color: #3b5998
+
+		.fa-instagram-square
+			color: #d6249f
+
+@include mobile-max
+	.social-container
+		top: unset
+		left: .5rem
+		bottom: .5rem
+		flex-direction: row
+
+		a:first-child
+			margin-right: .5rem
+			margin-bottom: 0
+
+		.fa-facebook-square
+			color: #3b5998
+
+		.fa-instagram-square
+			color: #d6249f

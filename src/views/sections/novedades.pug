@@ -1,0 +1,6 @@
+section
+	header.sections-header
+		h2 novedades
+	.novedades
+		each novedad in novedades
+			+card-producto(routes.articulos, novedad.path, novedad.title, novedad.precio)

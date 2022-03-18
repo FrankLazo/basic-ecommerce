@@ -1,0 +1,78 @@
+.sections
+	margin: auto
+	padding-left: 4em
+	padding-right: 4em
+	padding-bottom: 4em
+
+.sections-header
+	@include flex( center, center )
+	margin-top: 3em
+	margin-bottom: 3em
+
+	h2
+		font-size: var( --text-size-md )
+		letter-spacing: 0.125em
+		line-height: var( --text-size-md )
+		text-indent: 0.125em
+		text-transform: uppercase
+
+.novedades
+	display: grid
+	grid-template-columns: repeat( 4, 1fr )
+	grid-gap: 2em
+
+.categorias
+	display: grid
+	grid-template-columns: repeat( 2, 1fr )
+	grid-gap: 2em
+
+@include tablet
+	.novedades
+		grid-template-columns: repeat( 2, 1fr )
+
+	.categorias
+		grid-template-columns: repeat( 1, 1fr )
+
+@include mobile-max
+	.sections
+		padding-left: 1em
+		padding-right: 1em
+		padding-bottom: 1em
+
+	.novedades,
+	.categorias
+		grid-gap: 1em
+
+/* PRODUCTOS */
+
+.productos-listado
+	display: grid
+	grid-template-columns: repeat( 3, 1fr )
+	grid-gap: 2em
+	padding: 4em
+	padding-top: 2em
+
+@include laptop
+	.productos
+		padding: 1em
+
+	.productos-listado
+		padding: 1em
+
+@include tablet
+	.productos
+		padding-top: 0
+
+	.productos-listado
+		grid-gap: 1em
+		padding: 0
+
+@include mobile-max
+	.productos
+		padding: .5em
+		padding-top: 0
+
+	.productos-listado
+		grid-template-columns: repeat( 2, 1fr )
+		grid-gap: .5em
+		padding-top: .5em

@@ -1,0 +1,40 @@
+.card-categoria
+	position: relative
+	width: 100%
+
+	img
+		width: 100%
+
+	.card-title
+		position: absolute
+		bottom: 0
+		@include flex( space-between, center, column )
+		width: 100%
+
+	.card-content
+		margin-top: 1em
+		margin-bottom: 1em
+		color: var( --light-text )
+		font-size: var( --text-size-ml )
+		font-weight: $bold-font
+		letter-spacing: .5em
+		text-indent: .5em
+		text-transform: uppercase
+
+	a
+		display: block
+		padding: 1em 3em
+		margin-bottom: 2em
+		border: 1px solid var( --light-border )
+		color: var( --light-text )
+		font-size: var( --text-size-ms )
+		letter-spacing: .25em
+		text-indent: .25em
+		text-decoration: none
+		text-transform: uppercase
+
+	a:hover
+		background-color: var( --light-background-mo )
+
+	a:visited
+		color: var( --light-text )

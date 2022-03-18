@@ -1,0 +1,17 @@
+.header
+	position: fixed
+	top: 0
+
+	@include flex( default, center )
+
+	box-sizing: border-box
+	width: 100%
+	height: var( --header-height )
+	background-color: var( --light-background-ho )
+	@include border( b, 1px, solid, $white )
+
+	z-index: var( --z-header )
+
+@include tablet
+	.header
+		@include flex( space-between, center )

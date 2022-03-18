@@ -1,0 +1,35 @@
+.location-btn
+	width: 100%
+	background-color: unset
+	@include padding( 1em )
+	border: none
+	@include border( b, 1px, solid, var( --light-border ) )
+	outline: none
+	cursor: pointer
+
+	h3
+		@include margin( 0, 0, .5em, 0 )
+		font-size: var( --text-size-ms )
+		letter-spacing: .2em
+		text-indent: .2em
+		text-transform: uppercase
+
+	p
+		@include margin( 0, 0, .25em, 0 )
+		font-size: var( --text-size-sm )
+
+.location-btn:hover
+	background-color: var( --light-gray-background )
+
+.actual-location
+	color: var( --light-text )
+	background-color: var( --dark-background )
+
+	h3
+		font-weight: $regular-font
+
+	p
+		font-weight: $light-font
+
+.actual-location:hover
+	background-color: var( --dark-soft-background )

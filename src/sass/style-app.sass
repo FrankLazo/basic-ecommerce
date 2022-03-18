@@ -1,0 +1,89 @@
+// GENERAL
+.show
+	display: block
+
+.hidden
+	display: none!important
+
+// HEADER
+
+.app-navbar-logo
+	height: 30px
+
+// PRODUCTOS
+
+.table-image
+	height: 4rem
+
+// NUEVO PRODUCTO
+
+.form-img-gallery
+	display: grid
+	grid-template-columns: repeat(4, 1fr)
+	grid-gap: 1rem
+
+	img
+		width: 100%
+
+.form-img-container
+	.add-image
+		height: 100%
+
+.form-color-sample
+	display: inline-block
+	width: 1.5rem
+	height: 1.5rem
+	border-radius: 100%
+
+.form-color-gallery
+	display: grid
+	grid-template-columns: repeat(1, 1fr)
+	grid-gap: .75rem
+
+@media screen and (max-width: 767px)
+	.form-img-gallery
+		grid-gap: .5rem
+
+	.form-color-gallery
+		grid-template-columns: repeat(3, 1fr)
+
+@media screen and (max-width: 575px)
+	.form-img-gallery
+		grid-template-columns: repeat(2, 1fr)
+
+	.form-color-gallery
+		grid-template-columns: repeat(2, 1fr)
+
+@media screen and (max-width: 480px)
+	.form-color-gallery
+		grid-template-columns: repeat(1, 1fr)
+
+@media screen and (max-width: 320px)
+	.form-img-gallery
+		grid-template-columns: repeat(1, 1fr)
+
+// TABLAS
+
+.table-color-sample
+	width: 6rem
+	height: 2rem
+
+.avatar-app-header
+	display: block
+	width: 3rem
+	height: 3rem
+	border-radius: 100%
+
+	img
+		width: 100%
+		border-radius: 100%
+
+// .icon-alert
+// 	display: inline-block
+// 	width: 1.5em
+// 	height: 1.5em
+// 	margin-right: 1rem
+// 	background-image: url('../assets/acerca-de.svg')
+// 	background-size: 1.5em
+// 	background-repeat: no-repeat
+// 	opacity: .5

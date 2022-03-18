@@ -1,0 +1,26 @@
+button.whatsapp-btn#whatsapp-btn
+	i.fab.fa-whatsapp
+
+.whatsapp-container#whatsapp-container
+	.whatsapp-box#whatsapp-box
+		.close#whatsapp-close
+			.close-line
+
+		header
+			img( src="assets/images/avatar.png", alt="Avatar de manuselegance" )
+			.title
+				h2 Manu's elegance
+				p En línea
+
+		section.content
+			.message-box
+				p.name Manu's elegance:
+				p.message Hola!&#32;
+					span &#128516;
+					| &#32;Bienvenido, en qué puedo ayudarte?
+				p.time#whatsapp-time
+
+		section.chatbox
+			textarea( name="", placeholder="Escribe tu mensaje..." )#whatsapp-message
+			a( href="https://web.whatsapp.com/send?phone=51992112641&text=Hola!%20Deseo%20informes%20:)", target="_blank" )#whatsapp-send
+				p Enviar

@@ -1,0 +1,44 @@
+footer.footer
+	.footer-sections
+		ul.footer-categories
+			p.footer-title categorias
+			each category in categories
+				li.footer-item
+					a( href= routes.productos )= category
+
+		ul.footer-about
+			p.footer-title nosotros
+			li.footer-item
+				button.footer-btn#footer-btn-sales= menu.second[ 0 ]
+			li.footer-item
+				button.footer-btn#footer-btn-contact= menu.second[ 1 ]
+			li.footer-item
+				button.footer-btn#footer-btn-about= menu.second[ 2 ]
+
+		ul.footer-contact
+			p.footer-title contacto
+			li.footer-item
+				span.contact-label direccion:
+				span.contact-info Jirón Mariscal Luzuriaga 355
+					br
+					| Interior 103-110-111-128-136
+					br
+					| Jesús María 15072
+			li.footer-item
+				span.contact-label telefonos:
+				span.contact-info 981658350
+					br
+					| 981626580
+			li.footer-item
+				span.contact-label e-mail:
+				span.contact-info eavellaneda.uni@gmail.com
+			li.footer-item
+				span.contact-label siguenos:
+				span.contact-info
+					a( href= social.facebook, target="_blank" ) Facebook
+					|  -
+					a( href= social.instagram, target="_blank" ) Instagram
+
+
+	.footer-copyright
+		p Manu's Elegance. &copy; Todos los derechos reservados.

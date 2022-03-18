@@ -1,0 +1,29 @@
+.about-portrait
+	@include margin( 0, 1em, 0, 0 )
+	@include padding( 1em )
+	float: left
+
+	img
+		max-width: 18em
+
+.about-content
+	@include padding( 0, 1em, 1em, 1em )
+	font-size: var( --font-size-md )
+	line-height: normal
+	text-indent: 2em
+	text-align: justify
+
+@media screen and ( max-width: 599px )
+	.about-portrait
+		float: unset
+		width: 100%
+		text-align: center
+
+		img
+			margin-bottom: 1em
+
+@include mobile-max
+	.about-portrait
+		img
+			max-width: 100%
+			margin-right: 0
